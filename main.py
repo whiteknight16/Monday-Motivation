@@ -6,7 +6,7 @@ password="your app password"
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
     connection.login(user=my_mail,password=password)
-    if (dt.datetime().weekday()==0):
+    if (dt.datetime().weekday()==1):
         with open("./quotes.txt") as quote:
             quotes=quote.readlines()
             quotes=[i.split('\n', 1)[0] for i in quotes]
